@@ -1,10 +1,7 @@
 import { makeStyles } from "@mui/styles";
-import muiTheme from "../../themes/muiTheme";
+import muiTheme from "../themes/muiTheme";
 
 const useStyles = makeStyles({
-    sidebarSection: {
-       
-    },
     dashboardContentSection: {
         minHeight: "100%",
         background: '#f3f4f6',
@@ -19,7 +16,7 @@ const useStyles = makeStyles({
             height: 'calc(100vh - 164px)',
             overflow: 'auto'
         },
-    }
+    },
 });
 
 export default useStyles;
