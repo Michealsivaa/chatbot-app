@@ -18,7 +18,7 @@ const useStyles = makeStyles({
       borderRight: "1px solid #EFF4FA",
       borderRadius: "0px",
       padding: "20px",
-      height: "calc(100vh - 41px)",
+      height: "calc(100vh - 39px)",
       position: 'relative',
       [muiTheme.breakpoints.down(900)]: {
         height: 'inherit',

@@ -10,19 +10,25 @@ const useStyles = makeStyles({
           },
     },
     topicHeading: {
-        textAlign: 'center',
+        textAlign: 'left',
         fontSize: '20px',
         fontWeight: 800,
-        margin: '36px 0 20px 0'
+        padding: '36px 0 20px 0',
+        
     },
     topicAreaSection:{
-        border: '1px solid #707782',
-        padding: '12px',
+        padding: '6px 0',
         borderRadius: '6px',
         fontSize: 16,
         fontWeight: 600,
         color: 'black',
         cursor: 'pointer',
+        display: 'flex',
+        alignItems: 'center',
+        '& .MuiSvgIcon-root': {
+            color: '#f9450b',
+            fontSize: '16px'
+        },
         [muiTheme.breakpoints.between(900, 1248)]: {
             fontSize: 13,
         },
@@ -31,20 +37,42 @@ const useStyles = makeStyles({
         },
     },
     topicActive: {
-        border: '1px solid #f7a38b',
-        background: '#f9450b',
-        padding: '12px',
+        padding: '6px 0',
         borderRadius: '6px',
         fontSize: 16,
         fontWeight: 600,
-        color: 'white',
+        color: 'black',
         cursor: 'pointer',
+        display: 'flex',
+        alignItems: 'center',
+        '& .MuiSvgIcon-root': {
+            color: '#f9450b',
+            fontSize: '16px'
+        },
         [muiTheme.breakpoints.down(1280)]: {
             fontSize: 14,
         },
         [muiTheme.breakpoints.down(768)]: {
         fontSize: 16,
         },
+    },
+    topicAreaInnerList: {
+        padding: '12px 0',
+        borderTop: '1px solid #d7d7d7',
+        borderBottom: '1px solid #d7d7d7',
+
+    },
+    paginationSection: {
+        textAlign: 'center',
+        color: '#f9450b',
+        margin: "12px",
+        '& .MuiSvgIcon-root': {
+            color: '#f9450b',
+            fontSize: '16px'
+        },
+    },
+    next: {
+        transform: 'rotate(180deg)'
     },
     uploadSection: {
         display: 'flex',
@@ -143,6 +171,25 @@ const useStyles = makeStyles({
             overflow: 'inherit',
 
         },
+    },
+    topicAreaButton: {
+        textAlign: 'center',
+        '& .MuiButtonBase-root': {
+            background: '#f9450b',
+            fontSize: '24px',
+            padding: '8px 24px',
+            textTransform: 'capitalize',
+            borderRadius: '14px',
+            '&:hover': {
+            background: '#f9450b',
+
+            }
+        },
+
+    },
+    promptSection: {
+        width: '75%',
+        margin: '0 auto'
     }
 });
 
