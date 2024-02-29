@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Box, Drawer } from "@mui/material";
+import { Box, Drawer, styled } from "@mui/material";
 import { Divider, List, ListItem, ListItemButton, ListItemText, MenuItem, MenuList } from '@mui/material';
 // import menuLogoImg from "../../images/viot-white-logo.svg";
 import AttributionIcon from '@mui/icons-material/Attribution';
@@ -64,6 +64,15 @@ const SideBar = () => {
         },
     ];
 
+    const VisuallyHiddenInput = styled("input")({
+        opacity: 0,
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        top: 0,
+        right: 0,
+    });
+
     return (
         <Box component={"nav"} sx={{ flexShrink: 0, }}>
             <Drawer
@@ -106,7 +115,9 @@ const SideBar = () => {
                     </div>
                     <div className={fileUploadSection}>
                         <UploadFileIcon />
-                        <div><input type="file" /></div>
+                        <VisuallyHiddenInput type="file"
+                        />
+                        <p style={{marginLeft: 16}}>File Manager</p>
                     </div>
                 </div>
                 <div>

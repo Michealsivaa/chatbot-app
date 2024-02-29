@@ -18,7 +18,7 @@ const useStyles = makeStyles({
       borderRight: "1px solid #EFF4FA",
       borderRadius: "0px",
       padding: "20px",
-      height: "calc(100vh - 39px)",
+      height: "calc(100vh - 40px)",
       position: 'relative',
       [muiTheme.breakpoints.down(900)]: {
         height: 'inherit',
@@ -70,7 +70,11 @@ const useStyles = makeStyles({
   fileUploadSection: {
     borderBottom: '2px solid #4e5f6f',
     padding: '12px 0',
-    color: 'white'
+    color: 'white',
+    display: 'flex',
+    alignItems: 'center',
+    position: 'relative',
+    cursor: "pointer",
   },
   listItemTitle: {
     padding:' 0 !important',

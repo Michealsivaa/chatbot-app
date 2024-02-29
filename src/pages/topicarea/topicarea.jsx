@@ -7,13 +7,14 @@ import SearchBox from '../../elements/searchbox';
 import CustomButton from '../../elements/button/customButton';
 import AddIcon from '@mui/icons-material/Add';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import { Link } from 'react-router-dom';
 
 const TopicArea = () => {
   const { topicHeading, hrAdviceTitle, topicAreaSection, topicActive, selectSource, advancedPrompt, uploadSection, chatboxSection, chatboxRow, homePageTop, topicAreaButton,topicAreaInnerList,paginationSection,previous, next, promptSection } = useStyles();
   const [isActive, setIsActive] = useState(false);
   
   const topicArea = [
-    { id: 1, area: 'Deal with a case of persistent short-term sickness absenses'},
+    { id: 1, area: 'Deal with a case of persistent short-term sickness absenses', pageLink: "/quickprompts"},
     { id: 2, area: 'Set an absence target for the organisation'},
     { id: 3, area: 'Set the absence levels that will trigger a formal review'},
     { id: 4, area: `Measure the organisation's absence rate`},
@@ -43,10 +44,10 @@ const TopicArea = () => {
               {topicArea.map((item) => {
                 return (
                   <Grid item xs={12}>
-                    <div className={isActive === item.id ? topicActive : topicAreaSection} onClick={(event) => handleClick(event, item.id)}>
+                    <Link to={item.pageLink} className={isActive === item.id ? topicActive : topicAreaSection} onClick={(event) => handleClick(event, item.id)}>
                       <div>{item.area}</div>
                       <AddIcon />
-                    </div>
+                    </Link>
                   </Grid>
                 )
               })}

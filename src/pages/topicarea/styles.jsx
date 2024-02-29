@@ -25,9 +25,16 @@ const useStyles = makeStyles({
         cursor: 'pointer',
         display: 'flex',
         alignItems: 'center',
+        textDecoration: 'none',
+        display: 'flex',
+        alignItems:'center',
+        "&:hover": {
+            color: '#f9450b',
+        },
         '& .MuiSvgIcon-root': {
             color: '#f9450b',
-            fontSize: '16px'
+            fontSize: '16px',
+            marginLeft: '6px'
         },
         [muiTheme.breakpoints.between(900, 1248)]: {
             fontSize: 13,
@@ -45,6 +52,9 @@ const useStyles = makeStyles({
         cursor: 'pointer',
         display: 'flex',
         alignItems: 'center',
+        textDecoration: 'none',
+        display: 'flex',
+        alignItems:'center',
         '& .MuiSvgIcon-root': {
             color: '#f9450b',
             fontSize: '16px'
