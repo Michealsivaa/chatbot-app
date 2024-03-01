@@ -19,7 +19,7 @@ const useStyles = makeStyles({
             height: 'calc(100vh - 164px)',
             overflow: 'auto'
         },
-    }
+    },
 });
 
 export default useStyles;

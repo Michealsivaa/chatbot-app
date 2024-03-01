@@ -13,8 +13,22 @@ const useStyles = makeStyles({
         textAlign: 'center',
         fontSize: '20px',
         fontWeight: 800,
-        padding: '36px 0 48px 0',
+        padding: '36px 0 18px 0',
         
+    },
+    topicHeadingBottom: {
+        textAlign: 'left',
+        fontSize: '20px',
+        fontWeight: 800,
+        padding: '0px 0 30px 0',
+    },
+    chatDetailsList: {
+        marginBottom: 36,
+        "& > p" : {
+            fontSize: 16,
+            lineHeight: '24px',
+            color: '#494949'
+        }
     },
     topicAreaSection:{
         padding: '6px 0',
@@ -25,6 +39,7 @@ const useStyles = makeStyles({
         cursor: 'pointer',
         display: 'flex',
         alignItems: 'flex-start',
+        position: 'relative',
         '& .MuiFormControlLabel-root': {
             display: 'flex',
             alignItems: 'flex-start',
@@ -39,6 +54,21 @@ const useStyles = makeStyles({
         },
         "& .MuiButtonBase-root.Mui-checked": {
             color: '#f9450b'
+        },
+        "& .MuiFormGroup-root": {
+            maxHeight: '140px',
+            overflow: 'auto',
+            display: 'block',
+            marginRight: "20px",
+            '&::after': {
+                content: '""',
+                width: 1,
+                height:"100%",
+                background: 'rgb(209 213 219 / 100%)',
+                position: 'absolute',
+                top: 0,
+                right: 20
+            },
         },
         [muiTheme.breakpoints.between(900, 1248)]: {
             fontSize: 13,
@@ -140,6 +170,10 @@ const useStyles = makeStyles({
         }
     },
     chatboxSection: {
+        '& .MuiSvgIcon-root' : {
+            display: 'none',
+
+        },
         '& .MuiOutlinedInput-root': {
             background: '#fff !important',
             borderRadius: '18px',
@@ -171,7 +205,7 @@ const useStyles = makeStyles({
     },
     chatboxRow: {
         position: 'absolute',
-        bottom: '-77px',
+        bottom: '118px',
         left: '50%',
         width: '75%',
         padding: '24px 24px 24px 24px',
@@ -186,7 +220,7 @@ const useStyles = makeStyles({
         },
     },
     homePageTop: {
-        height: 'calc(100vh - 160px)',
+        height: 'calc(100vh - 255px)',
         overflow: 'auto',
         padding: '36px 48px',
         [muiTheme.breakpoints.down(1024)]: {
@@ -213,6 +247,22 @@ const useStyles = makeStyles({
     promptSection: {
         width: '78%',
         margin: '0 auto'
+    },
+    promptSectionBotton: {
+        width: '78%',
+        margin: '0 auto',
+        maxHeight: '183px',
+        overflow: 'auto',
+        padding: '36px 48px',
+        '&::after': {
+            content: '""',
+            width: 1,
+            height:"85%",
+            background: 'rgb(209 213 219 / 100%)',
+            position: 'absolute',
+            top:66,
+            right: 77
+        },
     }
 });
 

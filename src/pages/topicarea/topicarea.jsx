@@ -7,7 +7,7 @@ import SearchBox from '../../elements/searchbox';
 import CustomButton from '../../elements/button/customButton';
 import AddIcon from '@mui/icons-material/Add';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const TopicArea = () => {
   const { topicHeading, hrAdviceTitle, topicAreaSection, topicActive, selectSource, advancedPrompt, uploadSection, chatboxSection, chatboxRow, homePageTop, topicAreaButton,topicAreaInnerList,paginationSection,previous, next, promptSection } = useStyles();

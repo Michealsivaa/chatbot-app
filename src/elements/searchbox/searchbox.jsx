@@ -12,7 +12,7 @@ const SearchBox = (props) => {
     const {selectRadio, setSelectedRadio} = useContext(MyContextApi);
     
 
-    const {searchInput} = props;
+    const {searchInput, rows} = props;
 
     const [searchText, setSearchText] = useState(selectRadio);
     const [disable, setDisable] = useState(false);
@@ -36,6 +36,8 @@ const SearchBox = (props) => {
                     onChange={handleInputChange}
                     placeholder="Enter a prompt here"
                     id="outlined-adornment-amount"
+                    multiline
+                    rows={rows} 
                     startAdornment={<AttachFileIcon position="start" />}
                     endAdornment={
                         <IconButton disabled={disable} onClick={onHandleClick} type="button" aria-label="search">

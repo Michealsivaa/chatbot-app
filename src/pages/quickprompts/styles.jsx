@@ -25,6 +25,7 @@ const useStyles = makeStyles({
         cursor: 'pointer',
         display: 'flex',
         alignItems: 'flex-start',
+        textDecoration: 'none',
         '& .MuiFormControlLabel-root': {
             display: 'flex',
             alignItems: 'flex-start',
@@ -40,13 +41,27 @@ const useStyles = makeStyles({
         "& .MuiButtonBase-root.Mui-checked": {
             color: '#f9450b'
         },
+        "& .MuiFormGroup-root": {
+            maxHeight: '308px',
+            overflow: 'auto',
+            display: 'block',
+            marginRight: "20px",
+            '&::after': {
+                content: '""',
+                width: 1,
+                height:"100%",
+                background: 'rgb(209 213 219 / 100%)',
+                position: 'absolute',
+                top: 0,
+                right: 20
+            },
+        },
         [muiTheme.breakpoints.between(900, 1248)]: {
             fontSize: 13,
         },
         [muiTheme.breakpoints.down(768)]: {
         fontSize: 16,
-        },
-
+        }, 
     },
     topicActive: {
         padding: '6px 0',
@@ -211,7 +226,7 @@ const useStyles = makeStyles({
 
     },
     promptSection: {
-        width: '78%',
+        width: '75%',
         margin: '0 auto'
     }
 });

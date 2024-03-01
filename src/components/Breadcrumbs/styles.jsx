@@ -9,7 +9,10 @@ const useStyles = makeStyles({
     top: 16,
     left: 16,
     border: '1px solid #aaaaaa',
-    padding: '8px 20px'
+    padding: '5px 12px',
+    fontSize: '14px',
+    lineHeight: '21px',
+    color: '#494949'
   }
 });
 export default useStyles;
