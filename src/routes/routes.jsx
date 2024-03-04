@@ -9,8 +9,8 @@ import Breadcrumbs from "../components/Breadcrumbs/breadCrumbs";
 import Quickpromptslist from "../pages/quickpromptslist";
 import { Link, useLocation } from 'react-router-dom';
 import SignUp from "../components/SignUp/signUp";
-import SignIn from "../components/SignUp/signIn";
 import MainLayout from "../pages/mainlayout";
+import LogIn from "../components/Login";
 
 
 
@@ -44,8 +44,8 @@ const HR_Routes = () => {
   // );
   return useRoutes([
     {
-      path: "/signin",
-      element: <SignIn />,
+      path: "/login",
+      element: <LogIn />,
     },
     {
       path: "/signup",
@@ -53,7 +53,7 @@ const HR_Routes = () => {
     },
     {
       path: "/",
-      element: <Navigate replace to="signin" />,
+      element: <Navigate replace to="login" />,
     },
     {
       path: "/",

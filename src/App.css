@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+input::placeholder {
+  font-size: 12px; 
+}
 
 .sidebar-bg {
   background: #2e354b;
