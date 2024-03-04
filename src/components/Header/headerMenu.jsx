@@ -18,15 +18,22 @@ const HeaderMenu = () => {
 
     return (
         <Grid container spacing={2} direction="row" alignItems="center" className={headerMain}>
-            <Grid item xs={12} sm={12} md={6} lg={3} xl={12} display="flex">
+            <Grid item xs={12} sm={12} md={6} lg={9} xl={9} display="flex">
                 <Typography className={headLogo}>HR<span className={addvStyle}>ADVISOR</span></Typography>
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={9} xl={12} className={menuStyle}>
+                <div className={menuStyle}>
                 {
                     menuItem.map((item) => (
                         <li>{item.content}</li>
                     ))
-                }
+                } 
+                </div>  
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} lg={3} xl={3}>
+                {/* {
+                    menuItem.map((item) => (
+                        <li>{item.content}</li>
+                    ))
+                } */}
                 <Box display="flex" justifyContent="right">
                 <Button variant="contained" className={headerButton}>Launch HRADVISOR</Button>
                 </Box>

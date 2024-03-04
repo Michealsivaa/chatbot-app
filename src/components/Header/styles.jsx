@@ -7,8 +7,13 @@ const HeaderStyles = makeStyles({
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "space-around"
+        '& > li': {
+            marginRight: "30%"
+        }
+        // justifyContent: "space-evenly",
+        // width: "100%"
     },
+
     addvStyle: {
         fontWeight: "bold",
     },
@@ -19,7 +24,8 @@ const HeaderStyles = makeStyles({
     },
     headLogo: {
         minWidth: 100, 
-        fontSize: "50px !important"
+        fontSize: "50px !important",
+        marginRight: "10% !important"
     },
     headerButton: {
         textTransform: "none !important", 
