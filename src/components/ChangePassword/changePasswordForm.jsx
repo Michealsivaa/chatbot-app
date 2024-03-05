@@ -3,26 +3,35 @@ import { Box, Grid } from '@mui/material'
 import FormControl, { useFormControl } from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import Button from '@mui/material/Button';
-import LoginStyle from './style'
+import ChangePasswordStyles from './styles';
 import { Link } from 'react-router-dom';
-
 
 const page = [
     {
-        pageLink: "/signup"
+        pageLink: "/login"
     }
 ]
-const LoginForm = () => {
-    const { labelStyle, fileInpShadow, heading, primary, forgetPasswordText } = LoginStyle();
+const ChangePasswordForm = () => {
+    const { labelStyle, fileInpShadow, heading, primary } = ChangePasswordStyles();
     return (
         <>
-            <h4 className={heading}>Login</h4>
+            <h4 className={heading}>Change Password</h4>
             <form>
                 <FormControl
                     fullWidth sx={{ pt: 2 }}>
                     <label
                         className={labelStyle}>
-                        Email address
+                        Old Password
+                    </label>
+                    <OutlinedInput
+                        placeholder='Email address'
+                        className={fileInpShadow} />
+                </FormControl>
+                <FormControl
+                    fullWidth sx={{ pt: 2 }}>
+                    <label
+                        className={labelStyle}>
+                        New Password
                     </label>
                     <OutlinedInput
                         placeholder='Email address'
@@ -33,7 +42,7 @@ const LoginForm = () => {
                     sx={{ pt: 2 }}>
                     <label
                         className={labelStyle}>
-                        Password
+                        Confirm New Password
                     </label>
                     <OutlinedInput
                         placeholder='password'
@@ -44,25 +53,14 @@ const LoginForm = () => {
                     fullWidth
                     sx={{ mt: 3, background: "#f54806" }}
                     variant="contained">
-                    Log In
+                    Change Password
                 </Button>
-                <Grid container spacing={2}>
-                    {/* <Grid item xs={12} lg={6} md={6}>
-                        <Link to='/changepassword'>
-                            <p className={forgetPasswordText}>Change Password</p>
-                        </Link>
-                    </Grid> */}
-                    <Grid item xs={12} lg={6} md={6}>
-                        <Link to='/forgotpassword'>
-                            <p className={forgetPasswordText}>Forgot your password</p>
-                        </Link>
-                    </Grid>
-                </Grid>
+                
 
                 <p style={{ fontSize: "13px", marginTop: "10px", textAlign: "center" }}>
-                    Don't have an account?  <span style={{ color: "#f54806", fontWeight: "bold" }}>
+                   Not now?   <span style={{ color: "#f54806", fontWeight: "bold" }}>
                         {page.map((item) => (
-                            <Link to={item.pageLink}>Sign Up for HRAdvisor</Link>
+                            <Link to={item.pageLink}>Login here</Link>
                         ))}
                     </span>
                 </p>
@@ -72,4 +70,4 @@ const LoginForm = () => {
     )
 }
 
-export default LoginForm
+export default ChangePasswordForm

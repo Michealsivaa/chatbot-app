@@ -1,6 +1,18 @@
 import { makeStyles } from "@mui/styles";
 
-const LoginStyle = makeStyles({
+const ChangePasswordStyles = makeStyles({
+    commonBgStyle: {
+        padding: "60px 60px", 
+        background:"#f3f4f6", 
+        marginTop: "0 !important", 
+        marginBottom: 2
+    },
+    primary: {
+        background: "#f54806",
+        '&:hover':{
+            background: "#f54806 !important"
+        }
+    },
     labelStyle: {
         fontSize: "12px",
         paddingBottom: "0px",
@@ -21,19 +33,6 @@ const LoginStyle = makeStyles({
             background: "#f54806 !important"
         }
     },
-    forgetPasswordText: {
-        textAlign: "center",
-        padding: "20px 0px",
-        textDecoration: "underline",
-        cursor: "pointer"
-    },
-    commonBgStyle:{
-        padding: "60px 60px", 
-        background:"#f3f4f6", 
-        marginTop: "0 !important", 
-        marginBottom: 2
-    }
-    
 })
 
-export default LoginStyle
+export default ChangePasswordStyles

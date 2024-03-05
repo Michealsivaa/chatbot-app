@@ -1,14 +1,13 @@
 import React from 'react'
-import LoginForm from './loginForm'
 import Grid from '@mui/material/Grid';
 import Header from '../Header/headerMenu'
 import FooterMenu from '../Footer';
-import LoginStyle from './style'
+import ChangePasswordForm from './changePasswordForm';
+import ChangePasswordStyles from './styles';
 
 
-
-const LogIn = () => {
-  const { commonBgStyle } = LoginStyle();
+const ChangePassword = () => {
+  const { commonBgStyle } = ChangePasswordStyles();
 
   return (
     <>
@@ -17,7 +16,7 @@ const LogIn = () => {
             <Grid item xs={12} lg={4} xl={12}>
             </Grid>
             <Grid item xs={12} lg={4} xl={12} sx={{ lineHeight: "30px", background: "#fff", color: "#000", padding: 2, borderRadius: 2 }}>
-                <LoginForm />
+                <ChangePasswordForm />
             </Grid>
             <Grid item xs={12} lg={4} xl={12}>
             </Grid>
@@ -27,4 +26,4 @@ const LogIn = () => {
   )
 }
 
-export default LogIn
+export default ChangePassword

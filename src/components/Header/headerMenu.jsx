@@ -17,7 +17,7 @@ const HeaderMenu = () => {
     const {menuStyle, addvStyle, headerMain, headLogo, headerButton} = HeaderStyles();
 
     return (
-        <Grid container spacing={2} direction="row" alignItems="center" className={headerMain}>
+        <Grid container direction="row" alignItems="center" className={headerMain}>
             <Grid item xs={12} sm={12} md={6} lg={9} xl={9} display="flex">
                 <Typography className={headLogo}>HR<span className={addvStyle}>ADVISOR</span></Typography>
                 <div className={menuStyle}>

@@ -1,7 +1,12 @@
 import { makeStyles } from "@mui/styles";
 
 const SignupStyle = makeStyles({
-    
+    commonBgStyle: {
+        padding: "60px 60px", 
+        background:"#f3f4f6",
+        marginTop: "0 !important", 
+        marginBottom: 2
+    },
     labelStyle: {
         fontSize: "12px",
         paddingBottom: "0px",
@@ -40,6 +45,7 @@ const SignupStyle = makeStyles({
             background: "#f54806 !important"
         }
     },
+    
 })
 
 export default SignupStyle

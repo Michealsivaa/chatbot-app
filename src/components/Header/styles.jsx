@@ -15,16 +15,18 @@ const HeaderStyles = makeStyles({
     },
 
     addvStyle: {
-        fontWeight: "bold",
+        fontWeight: "900",
+        fontFamily: "'Almarai', sans-serif",
     },
     headerMain: {
-        padding: "12px 10px", 
+        padding: "12px 32px", 
         background: "#2e394b", 
         color: "#fff"
     },
     headLogo: {
         minWidth: 100, 
-        fontSize: "50px !important",
+        fontSize: "52px !important",
+        fontFamily: "'Almarai', sans-serif",
         marginRight: "10% !important"
     },
     headerButton: {

@@ -11,6 +11,8 @@ import { Link, useLocation } from 'react-router-dom';
 import SignUp from "../components/SignUp/signUp";
 import MainLayout from "../pages/mainlayout";
 import LogIn from "../components/Login";
+import ForgotPassword from "../components/ForgotPassword";
+import ChangePassword from "../components/ChangePassword";
 
 
 
@@ -50,6 +52,14 @@ const HR_Routes = () => {
     {
       path: "/signup",
       element: <SignUp />,
+    },
+    {
+      path: "/forgotpassword",
+      element: <ForgotPassword />,
+    },
+    {
+      path: "/changepassword",
+      element: <ChangePassword />,
     },
     {
       path: "/",
